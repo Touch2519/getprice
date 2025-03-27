@@ -503,20 +503,20 @@
         })
 
         function init() {
-            liff.init({ liffId: '1655873446-MpmBPPzl' })
+            liff.init({ liffId: '1656249350-YjV0NPvv' })
             liff.ready.then(() => {
-                // if (!liff.isInClient()) {
-                //     return Swal.fire({
-                //         icon: 'warning',
-                //         title: 'กรุณาเปิดในแอป LINE',
-                //         text: 'กรุณาเปิดในแอป LINE เท่านั้น',
-                //         customClass: {
-                //             popup: 'rounded-4',
-                //         },
-                //         allowOutsideClick: false,
-                //         showConfirmButton: false,
-                //     })
-                // }
+                if (!liff.isInClient()) {
+                    return Swal.fire({
+                        icon: 'warning',
+                        title: 'กรุณาเปิดในแอป LINE',
+                        text: 'กรุณาเปิดในแอป LINE เท่านั้น',
+                        customClass: {
+                            popup: 'rounded-4',
+                        },
+                        allowOutsideClick: false,
+                        showConfirmButton: false,
+                    })
+                }
                 // $.post(scriptURL, { 
                 //     uid: liff.getDecodedIDToken().sub,
                 //     opt: 'saveUser' ,
